@@ -1,0 +1,30 @@
+import type { Claim } from "../types";
+
+export const claims: Claim[] = [
+  { id: "sn01", reference: "SIN-2026-0512", clientId: "c02", contractId: "ct06", type: "Accident matériel", status: "En traitement", priority: "Haute", declaredDate: "2026-06-28", updatedDate: "2026-07-08", description: "Collision à l'arrière sur parking, dommages pare-chocs et hayon.", estimatedAmount: 3200, paidAmount: null },
+  { id: "sn02", reference: "SIN-2026-0498", clientId: "c14", contractId: "ct32", type: "Dégât des eaux entrepôt", status: "En analyse", priority: "Critique", declaredDate: "2026-06-20", updatedDate: "2026-07-09", description: "Rupture de canalisation ayant endommagé le stock en entrepôt.", estimatedAmount: 28500, paidAmount: null },
+  { id: "sn03", reference: "SIN-2026-0475", clientId: "c09", contractId: "ct21", type: "Dégât des eaux", status: "Clôturé", priority: "Normale", declaredDate: "2026-05-14", updatedDate: "2026-06-02", description: "Infiltration depuis la salle de bain du voisin du dessus.", estimatedAmount: 1850, paidAmount: 1850 },
+  { id: "sn04", reference: "SIN-2026-0521", clientId: "c08", contractId: "ct20", type: "Vol de véhicule", status: "En analyse", priority: "Haute", declaredDate: "2026-07-02", updatedDate: "2026-07-10", description: "Véhicule utilitaire dérobé sur site de chantier durant la nuit.", estimatedAmount: 41000, paidAmount: null },
+  { id: "sn05", reference: "SIN-2026-0430", clientId: "c15", contractId: "ct34", type: "Bris de glace", status: "Clôturé", priority: "Basse", declaredDate: "2026-04-11", updatedDate: "2026-04-19", description: "Pare-brise fissuré par un impact de gravillon.", estimatedAmount: 420, paidAmount: 420 },
+  { id: "sn06", reference: "SIN-2026-0505", clientId: "c24", contractId: "ct52", type: "Litige contractuel", status: "En traitement", priority: "Haute", declaredDate: "2026-06-25", updatedDate: "2026-07-07", description: "Mise en cause de responsabilité professionnelle par un client.", estimatedAmount: 15600, paidAmount: null },
+  { id: "sn07", reference: "SIN-2026-0388", clientId: "c03", contractId: "ct07", type: "Accident matériel", status: "Clôturé", priority: "Normale", declaredDate: "2026-03-02", updatedDate: "2026-03-20", description: "Rayures et enfoncement portière suite à choc en stationnement.", estimatedAmount: 980, paidAmount: 780 },
+  { id: "sn08", reference: "SIN-2026-0517", clientId: "c05", contractId: "ct11", type: "Sinistre client", status: "Déclaré", priority: "Normale", declaredDate: "2026-07-09", updatedDate: "2026-07-09", description: "Réclamation d'un client relative à un retard de livraison de plans.", estimatedAmount: 6400, paidAmount: null },
+  { id: "sn09", reference: "SIN-2026-0462", clientId: "c18", contractId: "ct40", type: "Cambriolage", status: "En traitement", priority: "Haute", declaredDate: "2026-05-28", updatedDate: "2026-07-05", description: "Effraction avec vol de matériel électronique et bijoux.", estimatedAmount: 7200, paidAmount: null },
+  { id: "sn10", reference: "SIN-2026-0355", clientId: "c23", contractId: "ct51", type: "Hospitalisation", status: "Clôturé", priority: "Normale", declaredDate: "2026-02-18", updatedDate: "2026-03-01", description: "Prise en charge frais d'hospitalisation suite à intervention chirurgicale.", estimatedAmount: 4100, paidAmount: 3900 },
+  { id: "sn11", reference: "SIN-2026-0524", clientId: "c22", contractId: "ct48", type: "Incendie entrepôt", status: "Déclaré", priority: "Critique", declaredDate: "2026-07-10", updatedDate: "2026-07-10", description: "Départ de feu maîtrisé dans une zone de stockage, dégâts à évaluer.", estimatedAmount: 52000, paidAmount: null },
+  { id: "sn12", reference: "SIN-2026-0409", clientId: "c06", contractId: "ct14", type: "Frais médicaux", status: "Clôturé", priority: "Basse", declaredDate: "2026-03-25", updatedDate: "2026-04-08", description: "Remboursement de frais dentaires hors parcours de soins.", estimatedAmount: 650, paidAmount: 520 },
+  { id: "sn13", reference: "SIN-2026-0489", clientId: "c17", contractId: "ct37", type: "Litige contractuel", status: "En analyse", priority: "Normale", declaredDate: "2026-06-15", updatedDate: "2026-07-01", description: "Contestation d'honoraires par un client dans le cadre d'un dossier.", estimatedAmount: 3800, paidAmount: null },
+  { id: "sn14", reference: "SIN-2026-0316", clientId: "c12", contractId: "ct26", type: "Bris de glace", status: "Refusé", priority: "Basse", declaredDate: "2026-01-30", updatedDate: "2026-02-14", description: "Sinistre déclaré hors délai contractuel de 5 jours ouvrés.", estimatedAmount: 380, paidAmount: 0 },
+  { id: "sn15", reference: "SIN-2026-0500", clientId: "c11", contractId: "ct25", type: "Vol de matériel", status: "En traitement", priority: "Normale", declaredDate: "2026-06-22", updatedDate: "2026-07-06", description: "Vol d'ordinateurs portables dans les locaux du cabinet.", estimatedAmount: 5400, paidAmount: null },
+  { id: "sn16", reference: "SIN-2026-0470", clientId: "c13", contractId: "ct29", type: "Dégât des eaux", status: "Clôturé", priority: "Normale", declaredDate: "2026-05-10", updatedDate: "2026-05-29", description: "Fuite sur chauffe-eau ayant endommagé le parquet.", estimatedAmount: 2600, paidAmount: 2600 },
+  { id: "sn17", reference: "SIN-2026-0513", clientId: "c20", contractId: "ct44", type: "Sinistre client", status: "En analyse", priority: "Basse", declaredDate: "2026-07-01", updatedDate: "2026-07-08", description: "Demande d'indemnisation pour conseil jugé inadapté.", estimatedAmount: 2100, paidAmount: null },
+  { id: "sn18", reference: "SIN-2026-0445", clientId: "c02", contractId: "ct04", type: "Sinistre client", status: "Clôturé", priority: "Haute", declaredDate: "2026-04-20", updatedDate: "2026-05-15", description: "Mise en cause pour non-conformité de prestation livrée.", estimatedAmount: 9800, paidAmount: 8500 },
+];
+
+export function getClaimsByClient(clientId: string): Claim[] {
+  return claims.filter((c) => c.clientId === clientId);
+}
+
+export function getClaimsByContract(contractId: string): Claim[] {
+  return claims.filter((c) => c.contractId === contractId);
+}
