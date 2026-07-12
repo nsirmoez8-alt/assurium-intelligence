@@ -87,7 +87,7 @@ export function buildOpportunities(): Opportunity[] {
       id: "op-retention",
       kind: "retention",
       title: "Clients à forte valeur et satisfaction fragile",
-      description: `${retention.length} clients représentant plus de 6 000 € de primes annuelles affichent une satisfaction sous les 85 %.`,
+      description: `${retention.length} clients représentant plus de 6 000 DT de primes annuelles affichent une satisfaction sous les 85 %.`,
       clients: retention,
       potentialGain: retention.reduce((s, c) => s + getContractsByClient(c.id).filter((ct) => ct.status === "Actif").reduce((a, ct) => a + ct.premium, 0), 0),
       confidence: 82,

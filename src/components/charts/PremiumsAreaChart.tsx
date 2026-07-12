@@ -35,7 +35,7 @@ export function PremiumsAreaChart() {
           axisLine={false}
           tickLine={false}
           tick={{ fill: colors.tick, fontSize: 12, fontFamily: "Inter" }}
-          tickFormatter={(v) => `${Math.round(v / 1000)}k€`}
+          tickFormatter={(v) => `${Math.round(v / 1000)}k DT`}
           width={44}
         />
         <Tooltip content={(props) => <ChartTooltip {...props} currency />} cursor={{ stroke: colors.tooltipStroke, strokeWidth: 1 }} />

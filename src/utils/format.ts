@@ -1,37 +1,37 @@
-const currencyFormatter = new Intl.NumberFormat("fr-FR", {
-  style: "currency",
-  currency: "EUR",
+// Le dinar tunisien (TND) se subdivise en 1000 millimes ; le support ICU de "TND"
+// étant inégal selon les environnements, on formate le montant nous-mêmes et on
+// ajoute le suffixe "DT" (Dinar Tunisien), l'usage courant en Tunisie.
+const amountFormatter = new Intl.NumberFormat("fr-TN", {
   maximumFractionDigits: 0,
 });
 
-const currencyFormatterDecimal = new Intl.NumberFormat("fr-FR", {
-  style: "currency",
-  currency: "EUR",
-  maximumFractionDigits: 2,
+const amountFormatterDecimal = new Intl.NumberFormat("fr-TN", {
+  minimumFractionDigits: 3,
+  maximumFractionDigits: 3,
 });
 
-const numberFormatter = new Intl.NumberFormat("fr-FR");
+const numberFormatter = new Intl.NumberFormat("fr-TN");
 
-const dateFormatter = new Intl.DateTimeFormat("fr-FR", {
+const dateFormatter = new Intl.DateTimeFormat("fr-TN", {
   day: "2-digit",
   month: "short",
   year: "numeric",
 });
 
-const dateFormatterLong = new Intl.DateTimeFormat("fr-FR", {
+const dateFormatterLong = new Intl.DateTimeFormat("fr-TN", {
   day: "numeric",
   month: "long",
   year: "numeric",
 });
 
-const dateFormatterShort = new Intl.DateTimeFormat("fr-FR", {
+const dateFormatterShort = new Intl.DateTimeFormat("fr-TN", {
   day: "2-digit",
   month: "2-digit",
   year: "2-digit",
 });
 
 export function formatCurrency(value: number, decimals = false): string {
-  return decimals ? currencyFormatterDecimal.format(value) : currencyFormatter.format(value);
+  return decimals ? `${amountFormatterDecimal.format(value)} DT` : `${amountFormatter.format(value)} DT`;
 }
 
 export function formatNumber(value: number): string {

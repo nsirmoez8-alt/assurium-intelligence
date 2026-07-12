@@ -43,7 +43,7 @@ export interface Contract {
   clientId: string;
   type: ContractType;
   status: ContractStatus;
-  premium: number; // montant annuel en EUR
+  premium: number; // montant annuel en DT
   paymentFrequency: PaymentFrequency;
   startDate: string;
   endDate: string;

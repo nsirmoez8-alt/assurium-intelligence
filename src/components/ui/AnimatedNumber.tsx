@@ -51,6 +51,6 @@ export function AnimatedNumber({
   duration?: number;
 }) {
   const animated = useAnimatedNumber(value, duration);
-  const display = format ? format(animated) : Math.round(animated).toLocaleString("fr-FR");
+  const display = format ? format(animated) : Math.round(animated).toLocaleString("fr-TN");
   return <span className="font-tabular tabular-nums">{display}</span>;
 }
