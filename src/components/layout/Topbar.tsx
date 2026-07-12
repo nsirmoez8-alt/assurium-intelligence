@@ -1,14 +1,16 @@
-import { useNavigate } from "react-router-dom";
-import { Menu, Search, Moon, Sun } from "lucide-react";
+import { Menu, Moon, Sun } from "lucide-react";
 import { NotificationsPopover } from "./NotificationsPopover";
+import { GlobalSearch } from "./GlobalSearch";
 import { Avatar } from "../ui/Avatar";
 import { PeriodSelector } from "../ui/PeriodSelector";
 import { CURRENT_ADVISOR } from "../../data/clients";
+import { initials } from "../../utils/format";
 import { useTheme } from "../../context/ThemeContext";
 
 export function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
-  const navigate = useNavigate();
   const { theme, toggleTheme } = useTheme();
+  const [advisorFirstName, ...advisorLastParts] = CURRENT_ADVISOR.split(" ");
+  const advisorInitials = initials(advisorFirstName, advisorLastParts.join(" "));
 
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center gap-2.5 border-b border-mist bg-paper/85 px-4 backdrop-blur-md sm:px-6 dark:border-white/[0.08] dark:bg-ink-975/85">
@@ -20,13 +22,7 @@ export function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
         <Menu className="h-[18px] w-[18px]" />
       </button>
 
-      <button
-        onClick={() => navigate("/clients")}
-        className="hidden flex-1 max-w-md items-center gap-2.5 rounded-xl border border-mist bg-white px-3.5 py-2.5 text-sm text-ink-300 transition-colors hover:border-mist-dark sm:flex dark:border-white/[0.1] dark:bg-white/[0.04] dark:text-ink-300/60 dark:hover:border-white/[0.18]"
-      >
-        <Search className="h-4 w-4" />
-        <span>Rechercher un client, un contrat...</span>
-      </button>
+      <GlobalSearch />
 
       <div className="flex-1 sm:hidden" />
 
@@ -41,7 +37,7 @@ export function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
         </button>
         <NotificationsPopover />
         <div className="ml-0.5 flex items-center gap-2.5 border-l border-mist pl-2.5 dark:border-white/[0.08]">
-          <Avatar initials="CL" color="bg-ink-800" size="sm" />
+          <Avatar initials={advisorInitials} color="bg-ink-800" size="sm" />
           <div className="hidden text-left sm:block">
             <p className="text-sm font-medium leading-tight text-ink-900 dark:text-white">{CURRENT_ADVISOR}</p>
             <p className="text-2xs leading-tight text-ink-400 dark:text-ink-300/60">Conseillère patrimoniale</p>
